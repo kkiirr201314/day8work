@@ -1,16 +1,27 @@
 import kotlin.math.roundToInt
-
+import java.io.File
 const val  TAVERN_NAME = "Taerny's Folly"
 
 var playerGold = 10
 var playerSilver = 10
 val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 
+val menuList = File("data/tavern-menu-items.txt")
+    .readText()
+    .split("\r\n")
+
 fun main() {
+
     println("顧客清單如右: $patronList")
+
+    menuList.forEachIndexed { index, data ->
+        println("$index : $data")
+    }
+    println("------------------------------------------------")
+
     patronList.forEachIndexed { index, patron ->
         println("晚上好, $patron - 您排 #${index + 1} 號在隊伍中.")
-        placeOrder(patron,"shandy ,Dragon's Breath, 5.91")
+        placeOrder(patron,menuList.shuffled().first())
         println("------------------------------------------------")
     }
 }
@@ -48,7 +59,7 @@ private  fun placeOrder(patronName: String, menuData: String){
     val phrase = if (name == "Dragon's Breath"){
         "$patronName 驚呼道: ${toDragonSpeak("Ah, dlicious $name!")}"
     } else {
-        "Madrigal 說道: 感謝 $name ."
+        "$patronName 說道: 感謝 $name ."
     }
     println(phrase)
 }
