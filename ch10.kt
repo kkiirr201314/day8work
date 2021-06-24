@@ -14,6 +14,13 @@ fun main() {
     }else{
         println("酒館老闆說: Eli 不在這兒。")
     }
+
+    println("請問Sophie, Mordoc在店內嗎？")
+    if (patronList.containsAll(listOf("Sophie", "Mordoc"))){
+        println("酒館老闆說: 有阿，他們坐在燉鍋旁邊。")
+    }else{
+        println("酒館老闆說: 沒有，他們幾個小時前就離開了。")
+    }
     placeOrder("shandy ,Dragon's Breath, 5.91")
 }
 fun performPurchase(price: Double) {
