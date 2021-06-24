@@ -7,9 +7,13 @@ var playerSilver = 10
 val patronList = listOf("Eli", "Mordoc", "Sophie")
 
 fun main() {
-    var firstPatron = patronList[0]
     println("顧客清單如右: $patronList")
-    println("第一位顧客是: $firstPatron")
+    println("請問 Eli 在店內嗎？")
+    if (patronList.contains("Eli")){
+        println("酒館老闆說: Eli 在後面打牌。")
+    }else{
+        println("酒館老闆說: Eli 不在這兒。")
+    }
     placeOrder("shandy ,Dragon's Breath, 5.91")
 }
 fun performPurchase(price: Double) {
