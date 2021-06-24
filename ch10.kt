@@ -4,10 +4,12 @@ const val  TAVERN_NAME = "Taerny's Folly"
 
 var playerGold = 10
 var playerSilver = 10
-val patronList: List<String> = listOf("Eli", "Mordoc", "Sophie")
+val patronList = listOf("Eli", "Mordoc", "Sophie")
 
 fun main() {
-    println("顧客清單: $patronList")
+    var firstPatron = patronList[0]
+    println("顧客清單如右: $patronList")
+    println("第一位顧客是: $firstPatron")
     placeOrder("shandy ,Dragon's Breath, 5.91")
 }
 fun performPurchase(price: Double) {
