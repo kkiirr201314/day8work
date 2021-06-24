@@ -8,9 +8,10 @@ val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 
 fun main() {
     println("顧客清單如右: $patronList")
-    for (patron in patronList){
+    patronList.forEach { patron ->
         println("Good evening, $patron")
     }
+
 
     println("------------------------------------------------")
     placeOrder("shandy ,Dragon's Breath, 5.91")
