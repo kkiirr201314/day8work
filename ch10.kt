@@ -8,34 +8,11 @@ val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 
 fun main() {
     println("顧客清單如右: $patronList")
-
-    println("在 Eli 離開後，Alex 進來小酒館")
-    patronList.remove("Eli")
-    patronList.add("Alex")
-
-    println("另一位貴賓Alex也進來小酒館")
-    patronList.add(0,"Alex")
-    println("顧客清單如右: $patronList")
-    println("------------------------------------------------")
-
-    println("貴賓要求改名字為Alexis")
-    patronList[0]="Alexis"
-    println("顧客清單如右: $patronList")
-    println("------------------------------------------------")
-
-    println("請問 Eli 在店內嗎？")
-    if (patronList.contains("Eli")){
-        println("酒館老闆說: Eli 在後面打牌。")
-    }else{
-        println("酒館老闆說: Eli 不在這兒。")
+    for (patron in patronList){
+        println("Good evening, $patron")
     }
+
     println("------------------------------------------------")
-    println("請問Sophie, Mordoc在店內嗎？")
-    if (patronList.containsAll(listOf("Sophie", "Mordoc"))){
-        println("酒館老闆說: 有阿，他們坐在燉鍋旁邊。")
-    }else{
-        println("酒館老闆說: 沒有，他們幾個小時前就離開了。")
-    }
     placeOrder("shandy ,Dragon's Breath, 5.91")
 }
 fun performPurchase(price: Double) {
