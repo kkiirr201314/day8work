@@ -4,7 +4,7 @@ const val  TAVERN_NAME = "Taerny's Folly"
 
 var playerGold = 10
 var playerSilver = 10
-val patronList: List<String> = listOf("Eli", "Mordoc", "Sophie")
+val patronList: List<String> = listOf("Eli", "Mordoc", "Sophie", 1)
 
 fun main() {
     println("顧客清單: $patronList")
