@@ -8,8 +8,8 @@ val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 
 fun main() {
     println("顧客清單如右: $patronList")
-    patronList.forEach { patron ->
-        println("Good evening, $patron")
+    patronList.forEachIndexed { index, patron ->
+        println("Good evening, $patron - you're #${index+1} in line.")
     }
 
 
