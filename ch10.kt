@@ -4,10 +4,17 @@ const val  TAVERN_NAME = "Taerny's Folly"
 
 var playerGold = 10
 var playerSilver = 10
-val patronList = listOf("Eli", "Mordoc", "Sophie")
+val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 
 fun main() {
     println("顧客清單如右: $patronList")
+
+    patronList.remove("Eli")
+    patronList.add("Alex")
+
+    println("在 Eli 離開後，Alex 進來小酒館")
+    println("顧客名單如下: $patronList")
+
     println("請問 Eli 在店內嗎？")
     if (patronList.contains("Eli")){
         println("酒館老闆說: Eli 在後面打牌。")
