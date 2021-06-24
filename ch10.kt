@@ -9,11 +9,14 @@ val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 fun main() {
     println("顧客清單如右: $patronList")
 
+    println("在 Eli 離開後，Alex 進來小酒館")
     patronList.remove("Eli")
     patronList.add("Alex")
 
-    println("在 Eli 離開後，Alex 進來小酒館")
-    println("顧客名單如下: $patronList")
+    println("另一位貴賓Alex也進來小酒館")
+    patronList.add(0,"Alex")
+    println("顧客清單如右: $patronList")
+    println("------------------------------------------------")
 
     println("請問 Eli 在店內嗎？")
     if (patronList.contains("Eli")){
@@ -21,7 +24,7 @@ fun main() {
     }else{
         println("酒館老闆說: Eli 不在這兒。")
     }
-
+    println("------------------------------------------------")
     println("請問Sophie, Mordoc在店內嗎？")
     if (patronList.containsAll(listOf("Sophie", "Mordoc"))){
         println("酒館老闆說: 有阿，他們坐在燉鍋旁邊。")
