@@ -13,10 +13,16 @@ fun main() {
     println("*** Welcome to $TAVERN_NAME ***")
     menuList.forEachIndexed{ index, data ->
         val (type,name,price) = data.split(',')
+        val distantOfspace = 12-type.length/2
+        for(i in 1..distantOfspace){
+            print(" ")
+        }
+        println("~[$type]~")
         val lenOfdot = 32 - name.length-price.length
         print("$index, $name")
         for(i in 1..lenOfdot){
             print('.')}
             print("$price\n")
+        println("")
         }
     }
