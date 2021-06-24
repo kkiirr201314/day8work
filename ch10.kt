@@ -18,6 +18,11 @@ fun main() {
     println("顧客清單如右: $patronList")
     println("------------------------------------------------")
 
+    println("貴賓要求改名字為Alexis")
+    patronList[0]="Alexis"
+    println("顧客清單如右: $patronList")
+    println("------------------------------------------------")
+
     println("請問 Eli 在店內嗎？")
     if (patronList.contains("Eli")){
         println("酒館老闆說: Eli 在後面打牌。")
